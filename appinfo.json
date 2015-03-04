@@ -1,0 +1,23 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "b0ggyb33@gmail.com",
+    "longName": "SinxPi",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "sdkVersion": "3",
+    "shortName": "SinxPi",
+    "targetPlatforms": [
+        "basalt"
+    ],
+    "uuid": "408b5ba0-9eea-4e53-b182-d35c319189e2",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}

@@ -7,7 +7,18 @@
     "longName": "SinxPi",
     "projectType": "native",
     "resources": {
-        "media": []
+        "media": [
+            {
+                "file": "images/grid_paper_nsm.png",
+                "name": "IMAGE_WHITE_BCKGRND",
+                "type": "png"
+            },
+            {
+                "file": "images/grid_paper_sm.png",
+                "name": "BCKGRND",
+                "type": "png"
+            }
+        ]
     },
     "sdkVersion": "3",
     "shortName": "SinxPi",

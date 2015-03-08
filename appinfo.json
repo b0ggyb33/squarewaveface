@@ -9,13 +9,13 @@
     "resources": {
         "media": [
             {
-                "file": "images/grid_paper_nsm.png",
-                "name": "IMAGE_WHITE_BCKGRND",
+                "file": "images/grid_paper_sm.png",
+                "name": "BCKGRND",
                 "type": "png"
             },
             {
-                "file": "images/grid_paper_sm.png",
-                "name": "BCKGRND",
+                "file": "images/grid_paper_nsm.png",
+                "name": "IMAGE_WHITE_BCKGRND",
                 "type": "png"
             }
         ]

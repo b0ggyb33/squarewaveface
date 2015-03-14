@@ -40,18 +40,28 @@ void drawHands(Layer *this_layer,
 
   unsigned int radius = 45;
 
+  GColor hourColour,minuteColour,secondColour;
+  
+  #ifdef PBL_COLOR 
+    hourColour=GColorRed;    
+    minuteColour=GColorLimerick;
+    secondColour=GColorBlue;
+  #else
+    hourColour = minuteColour = secondColour = GColorBlack;
+  #endif
+    
   // Get the center of the screen (non full-screen)
   GPoint center = GPoint(bounds.size.w / 2, (bounds.size.h / 2));
   GPoint hourHand = getGPointFromAngle(center,radius,hourAngle);
-  drawClock(this_layer,ctx,center,hourHand,GColorRed,radius);
+  drawClock(this_layer,ctx,center,hourHand,hourColour,radius);
   
   //minute
   GPoint minuteHand = getGPointFromAngle(hourHand,radius/2,minuteAngle);
-  drawClock(this_layer,ctx,hourHand,minuteHand,GColorLimerick,radius/2);
+  drawClock(this_layer,ctx,hourHand,minuteHand,minuteColour,radius/2);
 
   //second
   GPoint secondHand = getGPointFromAngle(minuteHand,radius/4,secondAngle);
-  drawClock(this_layer,ctx,minuteHand,secondHand,GColorBlue,radius/4);
+  drawClock(this_layer,ctx,minuteHand,secondHand,secondColour,radius/4);
 
 }
 

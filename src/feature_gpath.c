@@ -24,7 +24,13 @@ static void main_window_load(Window *window)
   GRect window_bounds = layer_get_bounds(window_layer);
 
   //create Background
+  APP_LOG(APP_LOG_LEVEL_INFO, "Window size: %d %d",window_bounds.size.w, window_bounds.size.h);
   s_bitmap_layer = bitmap_layer_create(GRect(0, 0, window_bounds.size.w, window_bounds.size.h));
+  if (s_bitmap_layer==NULL)
+  {
+    APP_LOG(APP_LOG_LEVEL_ERROR, "Failed to create bitmap");
+  }
+  s_example_bitmap = gbitmap_create_with_resource(RESOURCE_ID_BCKGRND);
   bitmap_layer_set_bitmap(s_bitmap_layer, s_example_bitmap);
   layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_bitmap_layer));
   bitmap_layer_set_alignment(s_bitmap_layer, GAlignCenter);
@@ -74,9 +80,7 @@ static void init(void)
   hourAngle=0;
   minuteAngle=0;
   secondAngle=0;
-
-  s_example_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_WHITE_BCKGRND);
-  //144x168
+  
 }
 
 static void deinit(void)
